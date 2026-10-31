@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-[#FAFAFA] pb-12">
+        <nav class="flex flex-row justify-between items-center md:items-start px-7 py-7">
+              <img src="logo.svg" alt="logo" class="w-18 h-5 mt-2">
+                
+                <!--Hamburger: mobile only-->
+               <button id="menu-btn" class="relative z-50 md:hidden">
+                    <img id="menu-icon" src="icon-menu.svg" alt="menu" class="hover:cursor-pointer">
+               </button>
+
+                <!--Menu panel-->
+               <div id="mobile-menu" class="hidden fixed inset-y-0 right-0 z-40 w-64 bg-white p-6 pt-24 md:static md:flex md:w-auto md:flex-1 md:items-center md:justify-between md:bg-transparent md:p-0 md:pl-12">
+                    <ul class="flex flex-col gap-6 md:flex-row md:items-center md:gap-9">
+                
+                        <!--Features dropdown-->
+                        <li class="relative">
+                            <button id="features-btn" class="flex items-center gap-1 text-sm text-gray-500 font-medium hover:text-black hover:cursor-pointer">Features                
+                               <img src="icon-arrow-down.svg" alt="" class="arrow w-2 transition-transform">
+                           </button>
+
+                              <ul id="features" class="hidden md:absolute md:left-0 md:top-full md:z-50 mt-4 md:w-40 space-y-3 pl-4 md:rounded-lg md:bg-white md:p-5 md:shadow-lg">
+                                   <li><a href="#" class="flex items-center gap-3 text-sm text-gray-500 hover:text-black"><img src="icon-todo.svg" alt="" class="w-4">Todo List</a></li>
+                                   <li><a href="#" class="flex items-center gap-3 text-sm text-gray-500 hover:text-black"><img src="icon-calendar.svg" alt="" class="w-4">Calendar</a></li>
+                                   <li><a href="#" class="flex items-center gap-3 text-sm text-gray-500 hover:text-black"><img src="icon-reminders.svg" alt="" class="w-4">Reminders</a></li>
+                                   <li><a href="#" class="flex items-center gap-3 text-sm text-gray-500 hover:text-black"><img src="icon-planning.svg" alt="" class="w-4">Planning</a></li>
+                              </ul>
+                        </li>
+                        <!--Company dropdown-->
+                      <li class="relative">
+                          <button id="company-btn" class="flex items-center gap-1 text-sm text-gray-500 font-medium hover:text-black hover:cursor-pointer">Company                
+                              <img src="icon-arrow-down.svg" alt="" class="arrow w-2 transition-transform">
+                         </button>
+
+                          <ul id="company" class="hidden md:absolute md:left-0 md:top-full md:z-50 mt-4 md:w-40 space-y-3 md:rounded-lg md:bg-white md:p-5 md:shadow-lg">
+                              <li><a href="#" class="flex items-center gap-3 text-sm text-gray-500 hover:text-black">History</a></li>
+                              <li><a href="#" class="flex items-center gap-3 text-sm text-gray-500 hover:text-black">Our Team</a></li>
+                              <li><a href="#" class="flex items-center gap-3 text-sm text-gray-500 hover:text-black">Blog</a></li>
+                          </ul>
+                      </li>
+
+                       <li><a href="#" class="text-sm text-gray-500 font-medium hover:text-black">Careers</a></li>
+                       <li><a href="#" class="text-sm text-gray-500 font-medium hover:text-black">About</a></li>
+                   </ul>
+
+                   <nav class="flex flex-row justify-between items-start mt-6 md:mt-0">
+                      <ul class="flex flex-row justify-between space-x-7 items-start">
+                            <li><a href="#" class="text-sm text-gray-500 font-medium hover:text-black">Login</a></li>
+                            <button><a href="#" class="text-sm text-gray-500 font-medium border-2 border-gray-500 rounded-lg px-4 py-2 hover:bg-black hover:text-white">Register</a></button>
+                      </ul>
+                  </nav>
+              </div>
+      </nav>
+        
+      <!--Hero-->
+
+           <main class="flex flex-col-reverse items-center px-6 mt-8 text-center md:flex-row md:justify-between md:items-start md:text-left md:mt-35 md:ml-28 md:px-0 md:pr-28"> 
+              <div>
+                   <h1 class="text-black font-bold text-4xl md:text-7xl mt-10 md:mt-0">Make<br>remote work</h1>
+                    <p class="text-sm text-gray-500 font-medium mt-6 md:mt-8">Get your team in sync, no matter your location.<br class="hidden md:block">Streamline processes, create team rituals, and <br class="hidden md:block">watch productivity soar.</p>
+                    <button class="bg-black text-white text-sm font-medium rounded-lg border-2 mt-8 w-33 h-10 hover:bg-white hover:text-black hover:border-black">Learn more</button>
+             
+                     <div class="flex flex-row justify-between items-start mt-12 md:mt-23">
+                          <img src="client-databiz.svg" alt="client databiz" class="h-4 md:max-w-full md:h-auto">
+                          <img src="client-audiophile.svg" alt="client audiophile" class="h-5 md:max-w-full md:h-auto">
+                          <img src="client-meet.svg" alt="client meet" class="h-4 md:max-w-full md:h-auto">
+                          <img src="client-maker.svg" alt="client maker" class="h-4 md:max-w-full md:h-auto">
+                      </div>
+              </div>
+           
+                <img src="image-hero-mobile.png" alt="remote work illustration" class="w-full md:hidden">
+                <img src="image-hero-desktop.png" alt="remote work illustration" class=" hidden md:block w-[450px] h-auto -mt-15 object-contain">
+
+            </main>
+           
+        </div>
+
+
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
